@@ -1,0 +1,318 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Tori Petite – Century Furniture</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --tan: #A4968A;
+    --tan-dark: #8d7f73;
+    --blue: #246FC5;
+    --black: #000000;
+    --gray: #707070;
+    --white: #FFFFFF;
+    --off-white: #F8F6F4;
+    --radius: 28px;
+    --nav-h: 64px;
+  }
+
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+  body {
+    font-family: 'Avenir Next LT Pro', 'Avenir Next', 'Avenir', 'Nunito', sans-serif;
+    background: var(--off-white);
+    color: var(--black);
+    min-height: 100vh;
+  }
+
+  /* ── NAV ── */
+  nav {
+    display: flex;
+    align-items: center;
+    height: var(--nav-h);
+    background: var(--white);
+    border-bottom: 1px solid #e8e4e0;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    padding: 0 0 0 20px;
+  }
+
+  .nav-logo {
+    flex: 1;
+    display: flex;
+    align-items: center;
+  }
+
+  .nav-adg-logo {
+    height: 36px;
+    width: auto;
+    display: block;
+  }
+
+  .nav-cta {
+    background: var(--tan);
+    color: var(--white);
+    font-family: inherit;
+    font-size: 10px;
+    font-weight: 400;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    padding: 0 24px;
+    height: var(--nav-h);
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    transition: background 0.2s;
+    white-space: nowrap;
+    flex-shrink: 0;
+  }
+  .nav-cta:hover { background: var(--tan-dark); }
+
+  /* ── HERO ── */
+  .hero-wrapper {
+    position: relative;
+    line-height: 0;
+    overflow: hidden;
+  }
+
+  .hero-wrapper img {
+    width: 100%;
+    display: block;
+    object-fit: cover;
+  }
+
+  /* ── CONTENT CARD ── */
+  .card {
+    position: relative;
+    z-index: 2;
+    background: var(--white);
+    border-radius: var(--radius) var(--radius) 0 0;
+    padding: 36px 28px 44px;
+    margin-top: -28px;
+  }
+
+  /* ── COLLECTION HEADER ── */
+  .collection-header {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    margin-bottom: 16px;
+    gap: 8px;
+  }
+
+  /* Avenir Next LT Pro Bold 59px letter-spacing -21 */
+  .collection-title {
+    font-family: 'Avenir Next LT Pro', 'Avenir Next', 'Avenir', 'Nunito', sans-serif;
+    font-size: clamp(44px, 9vw, 59px);
+    font-weight: 700;
+    letter-spacing: -0.025em;
+    line-height: 1;
+    color: var(--black);
+  }
+
+  .century-logo-card {
+    height: 18px;
+    width: auto;
+    display: block;
+  }
+
+  /* ── DESCRIPTION — Avenir Next LT Pro Regular 18px ── */
+  .description {
+    font-family: 'Avenir Next LT Pro', 'Avenir Next', 'Avenir', 'Nunito', sans-serif;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 1.75;
+    color: #333;
+    margin-bottom: 28px;
+  }
+
+  /* ── LINKS — Avenir Next LT Pro Demi 25px ── */
+  .links {
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+    margin-bottom: 28px;
+  }
+
+  .links a {
+    font-family: 'Avenir Next LT Pro', 'Avenir Next', 'Avenir', 'Nunito', sans-serif;
+    font-size: 15px;
+    font-weight: 600;
+    color: var(--blue);
+    text-decoration: none;
+    letter-spacing: 0.01em;
+    transition: color 0.15s;
+    display: inline-flex;
+    align-items: center;
+    gap: 5px;
+  }
+  .links a::after { content: '›'; font-size: 1.1em; opacity: 0.6; }
+  .links a:hover { color: #1a57a0; }
+
+  /* ── BUTTON — Avenir Next LT Pro Italic 19px ── */
+  .btn-question {
+    display: block;
+    width: 100%;
+    background: var(--tan);
+    color: var(--white);
+    font-family: 'Avenir Next LT Pro', 'Avenir Next', 'Avenir', 'Nunito', sans-serif;
+    font-size: 14px;
+    font-weight: 400;
+    font-style: italic;
+    letter-spacing: 0.03em;
+    text-align: center;
+    padding: 15px 20px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    text-decoration: none;
+    transition: background 0.2s, transform 0.1s;
+  }
+  .btn-question:hover { background: var(--tan-dark); transform: translateY(-1px); }
+  .btn-question:active { transform: translateY(0); }
+
+  /* ── TABLET ── */
+  @media (min-width: 768px) {
+    :root { --nav-h: 72px; }
+
+    nav { padding-left: 32px; }
+    .nav-adg-logo { height: 44px; }
+    .nav-cta { font-size: 11px; padding: 0 36px; }
+
+    .card {
+      margin-top: -36px;
+      padding: 48px 56px 56px;
+    }
+
+    .collection-title { font-size: clamp(52px, 7vw, 68px); }
+    .century-logo-card { height: 22px; }
+    .description { font-size: 15px; margin-bottom: 36px; }
+    .links { flex-direction: row; flex-wrap: wrap; gap: 14px 44px; margin-bottom: 36px; }
+    .links a { font-size: 16px; }
+    .btn-question { width: auto; display: inline-block; padding: 15px 44px; font-size: 15px; }
+  }
+
+  /* ── DESKTOP ── */
+  @media (min-width: 1024px) {
+    nav { padding-left: 48px; }
+
+    .collection-header {
+      flex-direction: row;
+      align-items: flex-end;
+      justify-content: space-between;
+      gap: 16px;
+    }
+
+    .card {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      grid-template-rows: auto auto auto;
+      column-gap: 80px;
+      margin-top: -44px;
+      padding: 56px 72px 64px;
+    }
+
+    .collection-header { grid-column: 1; grid-row: 1; }
+    .description { grid-column: 1; grid-row: 2; margin-bottom: 0; }
+    .btn-question { grid-column: 1; grid-row: 3; margin-top: 32px; align-self: start; }
+    .links {
+      grid-column: 2; grid-row: 1 / 3;
+      flex-direction: column;
+      gap: 20px;
+      align-self: start;
+      padding-top: 4px;
+      margin-bottom: 0;
+    }
+    .links a { font-size: 18px; }
+  }
+
+  /* ── ANIMATIONS ── */
+  @keyframes fadeUp {
+    from { opacity: 0; transform: translateY(12px); }
+    to   { opacity: 1; transform: translateY(0); }
+  }
+  .card > * { animation: fadeUp 0.5s ease both; }
+  .card > *:nth-child(1) { animation-delay: 0.05s; }
+  .card > *:nth-child(2) { animation-delay: 0.15s; }
+  .card > *:nth-child(3) { animation-delay: 0.25s; }
+  .card > *:nth-child(4) { animation-delay: 0.35s; }
+    .card-tablet-left {
+      flex: 1;
+    }
+    .card-tablet-right {
+      padding-left: 40px;
+      border-left: 1px solid #D4CBC4;
+      margin-left: 40px;
+      width: 220px;
+      flex-shrink: 0;
+    }
+    .card-tablet-right .links {
+      flex-direction: column !important;
+      gap: 18px !important;
+      flex-wrap: nowrap !important;
+      margin-bottom: 0 !important;
+    }
+    /* hide btn from normal flow on tablet — it's inside left col */
+    .btn-question { display: inline-block; }
+  }
+</style>
+</head>
+<body>
+
+<nav>
+  <div class="nav-logo">
+    <img src="images/adg-logo.png" alt="ADG Home Interiors" class="nav-adg-logo">
+  </div>
+  <a class="nav-cta" href="https://www.centuryfurniture.com/Source/CustomProgram.aspx?ID=CORNSTNE" target="_blank" rel="noopener">
+    Custom Upholstery
+  </a>
+</nav>
+
+<div class="hero-wrapper">
+  <img id="hero-img" src="images/hero-desktop.jpg" alt="Century Tori Petite chairs in a living room setting">
+</div>
+
+<div class="card">
+
+  <div class="collection-header">
+    <h1 class="collection-title">Tori Petite</h1>
+    <img src="images/century-logo.png" alt="Century Furniture" class="century-logo-card">
+  </div>
+
+  <p class="description">
+    The Petite Tori Chair is a slightly smaller version of our best-selling Tori Chair. It features a tall back and clean lines that blend transitional styling with lots of comfort. Part of our Custom Source product, the Petite Tori can be customized by changing the arm, back and base options. It is also available as a swivel, swivel glider, swivel rocker and recliner. Matching ottoman is available.
+  </p>
+
+  <div class="links">
+    <a href="https://www.centuryfurniture.com/Source/CustomProgram.aspx?ID=CORNSTNE" target="_blank" rel="noopener">Customization Options</a>
+    <a href="https://www.centuryfurniture.com/Visualizer/Visualizer.aspx?sku=LTD5246-6S" target="_blank" rel="noopener">Visualizer</a>
+    <a href="https://www.centuryfurniture.com/centimages/TearSheets/Century/PetiteTori.pdf" target="_blank" rel="noopener">Tear Sheet (PDF)</a>
+  </div>
+
+  <a class="btn-question" href="mailto:pricing@atldesigngroup.com?subject=Questions%20about%20the%20Tori%20Petite">
+    Questions about the Tori Petite?
+  </a>
+
+</div>
+
+<script>
+  (function () {
+    var img = document.getElementById('hero-img');
+    function setHero() {
+      var w = window.innerWidth;
+      img.src = w < 768 ? 'images/hero-mobile.jpg'
+               : w < 1024 ? 'images/hero-tablet.jpg'
+               : 'images/hero-desktop.jpg';
+    }
+    setHero();
+    window.addEventListener('resize', setHero);
+  })();
+</script>
+
+</body>
+</html>
